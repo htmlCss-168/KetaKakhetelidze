@@ -3,23 +3,18 @@
   src: url('../fonts/BrunoAceSC-Regular.ttf') format('truetype');
 }
 
-*, *::before, *::after {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 header {
-  position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 4;
-
 }
 
 body {
-  font-family: Bruno;
+  font-family: 'Bruno';
 }
 
 nav {
@@ -27,6 +22,7 @@ nav {
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
+  background-color: #c0c0c0;
 }
 
 nav img {
@@ -103,7 +99,11 @@ nav img {
   grid-template-columns:repeat(2, 1fr);
   align-items: center;
   position: relative;
-  z-index: 3;
+}
+
+.right .image-wrapper img {
+  max-width: 100%;
+  height: auto;
 }
 
 .contact-heading h1{
@@ -339,3 +339,16 @@ footer .wave#wave4 {
   }
 }
 
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 20px;
+  }
+  .image-wrapper{
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
